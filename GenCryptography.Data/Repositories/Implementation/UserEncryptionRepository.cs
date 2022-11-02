@@ -15,16 +15,7 @@ namespace GenCryptography.Data.Repositories.Implementation
     {
         private string _connectionString;
 
-        public UserEncryptionRepository()
-        {
-        }
-
         public UserEncryptionRepository(string connectionString)
-        {
-            _connectionString = connectionString;
-        }
-
-        public void SetConnectionString(string connectionString)
         {
             _connectionString = connectionString;
         }

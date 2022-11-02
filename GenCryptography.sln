@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCryptography.Service", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCryptography.Data", "GenCryptography.Data\GenCryptography.Data.csproj", "{6CAECC27-D696-4BC3-817A-8FEB101511FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCryptography.Data.Test", "GenCryptography.Data.Test\GenCryptography.Data.Test.csproj", "{46CB304B-4AE0-4587-A0E0-C97FFC8F8635}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenCryptography.Service.Tests", "GenCryptography.Service.Tests\GenCryptography.Service.Tests.csproj", "{D7133B04-DADF-4B0B-9E65-30E226395BE9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{6CAECC27-D696-4BC3-817A-8FEB101511FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CAECC27-D696-4BC3-817A-8FEB101511FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CAECC27-D696-4BC3-817A-8FEB101511FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46CB304B-4AE0-4587-A0E0-C97FFC8F8635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46CB304B-4AE0-4587-A0E0-C97FFC8F8635}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46CB304B-4AE0-4587-A0E0-C97FFC8F8635}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46CB304B-4AE0-4587-A0E0-C97FFC8F8635}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7133B04-DADF-4B0B-9E65-30E226395BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7133B04-DADF-4B0B-9E65-30E226395BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7133B04-DADF-4B0B-9E65-30E226395BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7133B04-DADF-4B0B-9E65-30E226395BE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
