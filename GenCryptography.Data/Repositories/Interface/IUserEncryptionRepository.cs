@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenCryptography.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,6 @@ namespace GenCryptography.Data.Repositories.Interface
     {
         byte[] InsertOrUpdate(long userId, byte[] encryptionKey);
 
-
+        UserEncryption Get(long userId);
     }
 }
