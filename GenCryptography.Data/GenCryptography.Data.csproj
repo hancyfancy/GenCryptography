@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\Implementation\" />
+    <Folder Include="Repositories\Interface\" />
+  </ItemGroup>
+
 </Project>
