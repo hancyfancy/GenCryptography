@@ -1,4 +1,4 @@
-﻿using GenCryptography.Service.Interface;
+﻿using GenCryptography.Service.Utilities.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;

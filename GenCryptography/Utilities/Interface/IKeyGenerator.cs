@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GenCryptography.Service.Utilities.Interface
 {
-    internal interface IKeyGenerator
+    public interface IKeyGenerator
     {
+        byte[] GenerateEncryptionKey();
     }
 }

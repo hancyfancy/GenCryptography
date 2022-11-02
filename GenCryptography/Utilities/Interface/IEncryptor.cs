@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GenCryptography.Service.Utilities.Interface
 {
-    internal interface IEncryptor
+    public interface IEncryptor
     {
+        string Encrypt(byte[] key, string input);
     }
 }
