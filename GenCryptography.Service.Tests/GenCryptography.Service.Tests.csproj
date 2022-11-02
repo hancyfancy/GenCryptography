@@ -25,4 +25,8 @@
     <Folder Include="Utilities\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GenCryptography\GenCryptography.Service.csproj" />
+  </ItemGroup>
+
 </Project>
