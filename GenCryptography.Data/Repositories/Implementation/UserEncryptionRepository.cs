@@ -13,12 +13,20 @@ namespace GenCryptography.Data.Repositories.Implementation
 {
     public class UserEncryptionRepository : IUserEncryptionRepository
     {
-        private readonly string _connectionString;
+        private string _connectionString;
+
+        public UserEncryptionRepository()
+        {
+        }
 
         public UserEncryptionRepository(string connectionString)
         {
             _connectionString = connectionString;
-            CreateTable();
+        }
+
+        public void SetConnectionString(string connectionString)
+        {
+            _connectionString = connectionString;
         }
 
         private int CreateTable()
@@ -31,19 +39,18 @@ namespace GenCryptography.Data.Repositories.Implementation
 
                     string sql = $@"IF 
 	                                    (NOT EXISTS (SELECT TABLE_CATALOG FROM INFORMATION_SCHEMA.TABLES  
-                                                     WHERE TABLE_SCHEMA = 'auth' 
-                                                     AND  TABLE_NAME = 'userencryption')) 
+                                                        WHERE TABLE_SCHEMA = 'auth' 
+                                                        AND  TABLE_NAME = 'userencryption')) 
                                     AND
 	                                    (EXISTS (SELECT TABLE_CATALOG FROM INFORMATION_SCHEMA.TABLES  
-                                                     WHERE TABLE_SCHEMA = 'auth' 
-                                                     AND  TABLE_NAME = 'users'))
+                                                        WHERE TABLE_SCHEMA = 'auth' 
+                                                        AND  TABLE_NAME = 'users'))
                                     BEGIN
                                         CREATE TABLE auth.userencryption (
 		                                    UserEncryptionId BIGINT IDENTITY (1, 1) PRIMARY KEY,
 		                                    UserId BIGINT NOT NULL FOREIGN KEY REFERENCES auth.users(UserId) ON DELETE CASCADE,
 		                                    EncryptionKey VARBINARY (MAX) NOT NULL,
-		                                    UNIQUE (UserId),
-		                                    UNIQUE (EncryptionKey)
+		                                    UNIQUE (UserId)
 	                                    )
                                     END";
 
@@ -87,6 +94,8 @@ namespace GenCryptography.Data.Repositories.Implementation
         {
             try
             {
+                CreateTable();
+
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
                     connection.Open();
@@ -129,6 +138,8 @@ namespace GenCryptography.Data.Repositories.Implementation
         {
             try
             {
+                CreateTable();
+
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
                     connection.Open();

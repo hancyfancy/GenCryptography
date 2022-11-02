@@ -12,5 +12,7 @@ namespace GenCryptography.Data.Repositories.Interface
         byte[] InsertOrUpdate(long userId, byte[] encryptionKey);
 
         UserEncryption Get(long userId);
+
+        void SetConnectionString(string connectionString);
     }
 }
