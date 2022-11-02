@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using GenCryptography.Data.Models;
 using GenCryptography.Data.Repositories.Interface;
 using System;
 using System.Collections.Generic;
@@ -123,5 +124,42 @@ namespace GenCryptography.Data.Repositories.Implementation
                 return default;
             }
         }
+
+        public UserEncryption Get(long userId)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+
+                    string sql = $@"SELECT 
+                                        e.UserEncryptionId,
+										e.EncryptionKey
+                                    FROM 
+	                                    auth.userencryption e
+									WHERE
+										e.UserId = @UserId";
+
+                    var result = connection.Query<UserEncryption>(sql, new
+                    {
+                        UserId = userId
+                    });
+
+                    connection.Close();
+
+                    UserEncryption userEncryption = result.FirstOrDefault();
+
+                    userEncryption.UserId = userId;
+
+                    return userEncryption;
+                }
+            }
+            catch (Exception e)
+            {
+                return default;
+            }
+        }
+
     }
 }
