@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCryptography.Service", "GenCryptography\GenCryptography.Service.csproj", "{7B11FDD9-CC34-47AE-A776-2A5940DBCC97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCryptography.Service", "GenCryptography.Service\GenCryptography.Service.csproj", "{7B11FDD9-CC34-47AE-A776-2A5940DBCC97}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCryptography.Data", "GenCryptography.Data\GenCryptography.Data.csproj", "{6CAECC27-D696-4BC3-817A-8FEB101511FC}"
 EndProject
